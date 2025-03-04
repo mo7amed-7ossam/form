@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>نموذج الحجز</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="container mt-5 text-end">
+
+    <form>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="bookType" class="form-label">نوع البوك</label>
+                <select class="form-select" id="bookType">
+                    <option selected disabled>اختر نوع البوك</option>
+                    <option value="type1">نوع 1</option>
+                    <option value="type2">نوع 2</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="offers" class="form-label">العروض</label>
+                <select class="form-select" id="offers">
+                    <option selected disabled hidden>اختر العرض</option>
+                    <option value="offer1">اشترى 12 و احصل على واحد مجانى</option>
+                    <option value="offer2">عرض 2</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="hall" class="form-label">الساحة</label>
+                <input type="text" class="form-control" id="hall" placeholder="ادخل اسم الساحة">
+            </div>
+            <div class="col-md-6">
+                <label for="numBooks" class="form-label">عدد الأبواك</label>
+                <input type="number" class="form-control" id="numBooks" placeholder="ادخل عدد الأبواك">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <label for="numCoupons" class="form-label">عدد الكوبونات</label>
+                <input type="number" class="form-control" id="numCoupons" placeholder="ادخل عدد الكوبونات">
+            </div>
+            <div class="col-md-4">
+                <label for="numCoupons" class="form-label"> الكوبونات المجانية</label>
+                <input type="number" class="form-control" id="numCoupons" placeholder="ادخل عدد الكوبونات">
+            </div>
+            <div class="col-md-4">
+                <label for="couponValue" class="form-label">قيمة الكوبون</label>
+                <input type="number" class="form-control" id="couponValue" placeholder="ادخل قيمة الكوبون">
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label d-block">طريقة الدفع</label>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="paymentMethod" id="visa" value="visa">
+                <label class="form-check-label" for="visa">Visa</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="paymentMethod" id="mastercard" value="mastercard">
+                <label class="form-check-label" for="mastercard">MasterCard</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="paymentMethod" id="mada" value="mada">
+                <label class="form-check-label" for="mada">Mada</label>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <label for="totalBeforeTax" class="form-label">إجمالي قبل الضريبة</label>
+                <input type="number" class="form-control" id="totalBeforeTax" readonly>
+            </div>
+            <div class="col-md-4">
+                <label for="vat" class="form-label">ضريبة القيمة المضافة (15%)</label>
+                <input type="number" class="form-control" id="vat" readonly>
+            </div>
+            <div class="col-md-4">
+                <label for="total" class="form-label">المجموع</label>
+                <input type="number" class="form-control" id="total" readonly>
+            </div>
+        </div>
+
+        
+
+        <button type="submit" class="btn btn-primary">إرسال</button>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
